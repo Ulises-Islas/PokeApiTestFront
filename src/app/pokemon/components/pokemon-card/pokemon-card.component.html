@@ -1,0 +1,17 @@
+<div class="row">
+    <div class="col-12 text-center">
+        <div class="card">
+            <div class="card-body">
+                <h5 class="card-title">{{ pokemon.name }}</h5>
+                <img [src]="pokemon.sprite" alt="{{ pokemon.name }}" class="img-fluid">
+                <p class="card-text">Pokemon Id: {{ pokemon.id }}</p>
+                <p class="card-text">Pokemon Height: {{ pokemon.height }}</p>
+                <p class="card-text">Pokemon Weight: {{ pokemon.weight }}</p>
+                <p class="card-text">Pokemon Abilities:</p>
+                <ul class="list-group">
+                    <li class="list-group-item" *ngFor="let pokemonAbility of pokemon.abilities">{{ pokemonAbility.ability.name }}</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>

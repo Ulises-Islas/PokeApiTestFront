@@ -1,0 +1,15 @@
+<div class="row p-3">
+    <div class="col-12">
+        <!-- Search Input -->
+        <pokemon-search-box (onEnter)="search($event)" (onDebounce)="sugest($event)" placeholder="Search by Pokmeon Id or Name..."></pokemon-search-box>
+    </div>
+    <div class="col-12 pt-2">
+        <!-- Pokemon Card -->
+        <div class="alert alert-danger" *ngIf="error">
+            <strong>Error!</strong> Any pokemon was found with this name or id.
+        </div>
+        <div *ngIf="!error">
+            <pokemon-card [pokemon]="pokemon"></pokemon-card>
+        </div>
+    </div>
+</div>
